@@ -1,8 +1,8 @@
 @import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css");
 
 :root {
-    --ink: #111111;
-    --muted: #111111;
+    --ink: #000000;
+    --muted: #000000;
     --orange: #ff7300;
     --green: #0b9531;
     --blue: #007ddb;
@@ -84,7 +84,7 @@ img {
     gap: 30px;
     font-size: 0.98rem;
     font-weight: 700;
-    color: #34422f;
+    color: #000;
 }
 
 .main-nav a:hover,
@@ -251,6 +251,38 @@ img {
     background: #fff;
 }
 
+.region-links-section {
+    background: #fff7ef;
+}
+
+.region-links-toggle {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.region-links-toggle summary {
+    padding: 30px;
+    border: 1px solid #f0decf;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 8px 12px 22px rgba(43, 72, 34, 0.07);
+}
+
+.region-links-toggle summary .section-label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.region-links-toggle summary strong {
+    display: block;
+    font-size: clamp(1.65rem, 4vw, 2.5rem);
+}
+
+.region-links-toggle[open] summary {
+    margin-bottom: 28px;
+}
+
 .split-layout,
 .exam-layout {
     display: grid;
@@ -306,7 +338,7 @@ img {
 .feature-panel li {
     padding: 14px 0;
     border-bottom: 1px solid #f0decf;
-    color: #354230;
+    color: #000;
     font-weight: 700;
 }
 
@@ -531,6 +563,43 @@ img {
     line-height: 1.7;
 }
 
+.region-link-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.region-link-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    padding: 22px 16px;
+    border: 1px solid #f0decf;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 8px 12px 22px rgba(43, 72, 34, 0.07);
+    transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.region-link-card:hover,
+.region-link-card:focus-visible {
+    transform: translateY(-5px);
+    border-color: var(--orange);
+}
+
+.region-link-card span {
+    margin-bottom: 10px;
+    color: var(--orange);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.region-link-card strong {
+    color: var(--ink);
+    line-height: 1.5;
+}
+
 details {
     padding: 26px;
     border: 1px solid var(--line);
@@ -620,6 +689,141 @@ details p {
     color: rgba(255, 255, 255, 0.72);
 }
 
+/* Region pages */
+.region-hero {
+    padding: 110px 0;
+    background: linear-gradient(135deg, #f4faec 0%, #fff 52%, #fff2e7 100%);
+}
+
+.region-hero h1 {
+    margin: 0;
+    font-size: clamp(2.7rem, 7vw, 5.2rem);
+    line-height: 1.12;
+}
+
+.region-hero h1 span {
+    display: block;
+    margin-top: 12px;
+    color: var(--green);
+    font-size: 0.58em;
+}
+
+.region-hero p:not(.section-label) {
+    max-width: 760px;
+    margin: 24px auto 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.region-detail-section,
+.region-map-section {
+    padding: 90px 0;
+}
+
+.region-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.region-info-panel {
+    padding: 34px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 10px 14px 26px rgba(43, 72, 34, 0.08);
+}
+
+.region-detail-grid > .region-info-panel:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(44px, 6vw, 76px) clamp(34px, 4vw, 58px);
+}
+
+.region-detail-grid > .region-info-panel:first-child .section-label {
+    margin-bottom: 22px;
+}
+
+.region-detail-grid > .region-info-panel:first-child h2 {
+    margin-bottom: 28px;
+    line-height: 1.45;
+}
+
+.region-detail-grid > .region-info-panel:first-child p:not(.section-label) {
+    margin: 0;
+    line-height: 2.05;
+}
+
+.region-detail-grid > .region-info-panel:first-child .region-tags {
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.region-info-panel h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.region-info-panel p:not(.section-label) {
+    line-height: 1.8;
+}
+
+.region-tags,
+.school-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.region-tags span,
+.school-list li {
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: var(--soft);
+    color: var(--green);
+    font-weight: 700;
+}
+
+.school-exam-content {
+    margin-top: 34px;
+}
+
+.school-exam-content h2 {
+    margin: 0;
+}
+
+.school-exam-content > p:not(.section-label) {
+    margin-top: 20px;
+}
+
+.region-map-section {
+    background: #fff7ef;
+}
+
+.region-map-image {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.region-home-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    margin-top: 28px;
+    padding: 0 24px;
+    border-radius: 999px;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 800;
+}
+
 @media (max-width: 920px) {
     .header-inner {
         min-height: 68px;
@@ -665,6 +869,8 @@ details p {
     .program-grid,
     .guide-grid,
     .tuition-grid,
+    .region-detail-grid,
+    .region-link-grid,
     .split-layout,
     .exam-layout {
         grid-template-columns: 1fr;
@@ -691,6 +897,16 @@ details p {
 
     .section {
         padding: 72px 0;
+    }
+
+    .region-hero,
+    .region-detail-section,
+    .region-map-section {
+        padding: 72px 0;
+    }
+
+    .region-detail-grid > .region-info-panel:first-child {
+        padding: 34px;
     }
 }
 
