@@ -1,6 +1,11 @@
 {
     "redirects":  [
                       {
+                          "source":  "/index.html",
+                          "destination":  "/",
+                          "permanent":  true
+                      },
+                      {
                           "source":  "/지역/강원도/강릉시/교동/보습학원/",
                           "destination":  "/지역/강릉/교동/보습학원/",
                           "permanent":  true
