@@ -253,30 +253,56 @@ img {
 
 .region-links-section {
     background: #fff7ef;
+    padding-top: 36px;
+    padding-bottom: 36px;
 }
 
 .region-links-toggle {
     padding: 0;
     border: 0;
     background: transparent;
+    text-align: center;
 }
 
 .region-links-toggle summary {
-    padding: 30px;
-    border: 1px solid #f0decf;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 8px 12px 22px rgba(43, 72, 34, 0.07);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: #ff6b00;
+    color: #fff;
+    box-shadow: none;
+    cursor: pointer;
+    list-style: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.region-links-toggle summary .section-label {
-    display: block;
-    margin-bottom: 12px;
+.region-links-toggle summary:hover,
+.region-links-toggle summary:focus-visible {
+    transform: translateY(-3px);
+    background: #f56100;
+    color: #fff;
+    box-shadow: 0 7px 14px rgba(255, 107, 0, 0.22);
+}
+
+.region-links-toggle summary::-webkit-details-marker {
+    display: none;
 }
 
 .region-links-toggle summary strong {
-    display: block;
-    font-size: clamp(1.65rem, 4vw, 2.5rem);
+    display: inline;
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.region-links-toggle summary:hover strong,
+.region-links-toggle summary:focus-visible strong {
+    color: #fff;
 }
 
 .region-links-toggle[open] summary {
