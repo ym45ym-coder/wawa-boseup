@@ -6,6 +6,11 @@
                           "permanent":  true
                       },
                       {
+                          "source":  "/favicon.ico",
+                          "destination":  "/assets/favicon.png",
+                          "permanent":  true
+                      },
+                      {
                           "source":  "/지역/인천/인천동구/금곡천/보습학원/",
                           "destination":  "/지역/인천/부평구/굴포천보습학원/",
                           "permanent":  true
@@ -432,7 +437,7 @@
                       },
                       {
                           "source":  "/지역/경기도/평택시/비전동/보습학원/",
-                          "destination":  "/지역/파주/비전동/보습학원/",
+                          "destination":  "/지역/평택/비전동보습학원/",
                           "permanent":  true
                       },
                       {
