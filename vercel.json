@@ -6,6 +6,11 @@
                           "permanent":  true
                       },
                       {
+                          "source":  "/지역/인천/인천동구/금곡천/보습학원/",
+                          "destination":  "/지역/인천/부평구/굴포천보습학원/",
+                          "permanent":  true
+                      },
+                      {
                           "source":  "/지역/강원도/강릉시/교동/보습학원/",
                           "destination":  "/지역/강릉/교동보습학원/",
                           "permanent":  true
