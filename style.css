@@ -998,6 +998,193 @@ details p {
     color: var(--orange);
 }
 
+.consult-apply-section {
+    padding: 78px 0 96px;
+    background: #fff7ef;
+    scroll-margin-top: 0;
+}
+
+.consult-apply-inner {
+    width: min(900px, calc(100% - 32px));
+}
+
+.consult-apply-section .section-header {
+    margin-bottom: 30px;
+}
+
+.consult-apply-section .section-label {
+    font-size: 0.72rem;
+}
+
+.consult-apply-section .section-header h2 {
+    margin: 9px 0 7px;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.consult-apply-section .section-header > p:last-child {
+    margin: 0;
+    color: #535c55;
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+/* 지역 상세페이지 제목 크기 통일 */
+.region-detail-heading-unified .region-info-panel h2,
+.region-detail-heading-unified .school-exam-content h2,
+.region-detail-heading-unified .section-copy h2,
+.region-detail-heading-unified .section-header h2 {
+    font-size: clamp(1.55rem, 3vw, 2rem);
+    line-height: 1.3;
+}
+
+.region-detail-heading-unified .consult-apply-section .section-label {
+    font-size: 0.86rem;
+}
+
+.consult-apply-form {
+    text-align: left;
+}
+
+.consult-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 20px;
+}
+
+.consult-form-grid label {
+    display: grid;
+    gap: 8px;
+}
+
+.consult-form-grid label > span {
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.consult-form-grid input,
+.consult-form-grid select,
+.consult-form-grid textarea {
+    width: 100%;
+    border: 1px solid #ff8a43;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    font-size: 0.74rem;
+    outline: none;
+}
+
+.consult-form-grid input,
+.consult-form-grid select {
+    min-height: 46px;
+    padding: 0 14px;
+}
+
+.consult-form-grid textarea {
+    min-height: 118px;
+    padding: 13px 14px;
+    resize: vertical;
+    line-height: 1.65;
+}
+
+.consult-form-grid input:focus,
+.consult-form-grid select:focus,
+.consult-form-grid textarea:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(255, 115, 0, 0.12);
+}
+
+.consult-form-wide {
+    grid-column: 1 / -1;
+}
+
+.consult-consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    font-size: 0.76rem;
+}
+
+.consult-consent input {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: var(--orange);
+}
+
+.consult-submit {
+    display: flex;
+    width: min(360px, 100%);
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 22px auto 0;
+    border: 0;
+    border-radius: 8px;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.consult-submit:hover,
+.consult-submit:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(255, 115, 0, 0.22);
+}
+
+.consult-complete-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(18, 25, 19, 0.38);
+}
+
+.consult-complete-popup[hidden] {
+    display: none;
+}
+
+.consult-complete-dialog {
+    display: grid;
+    width: min(320px, 100%);
+    gap: 22px;
+    padding: 32px 28px 24px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 20px 48px rgba(20, 30, 22, 0.22);
+    text-align: center;
+}
+
+.consult-complete-dialog strong {
+    font-size: 1.28rem;
+    font-weight: 700;
+}
+
+.consult-complete-dialog button {
+    min-height: 42px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--orange);
+    color: #fff;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.google-form-response {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Region pages */
 .region-hero {
     padding: 110px 0;
@@ -1111,11 +1298,12 @@ details p {
 }
 
 .region-map-section {
-    background: #fff7ef;
+    background: #fff;
 }
 
 .region-map-image {
-    width: min(100%, 706px);
+    width: min(100%, 694px);
+    height: auto;
     margin: 0 auto;
     border-radius: 8px;
 }
@@ -1333,6 +1521,19 @@ details p {
 }
 
 @media (max-width: 700px) {
+    .consult-apply-section {
+        padding: 58px 0 72px;
+    }
+
+    .consult-form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .consult-form-wide {
+        grid-column: auto;
+    }
+
     .region-directory-page .hub-hero {
         padding: 64px 0 54px;
     }

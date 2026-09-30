@@ -94,3 +94,55 @@ if (programSlider) {
 
     startAutoPlay();
 }
+
+const consultForm = document.querySelector(".consult-apply-form");
+const consultResponseFrame = document.querySelector(".google-form-response");
+const consultButton = document.querySelector(".floating-item.consult");
+const consultSection = document.getElementById("consult-apply");
+
+if (consultButton && consultSection) {
+    consultButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        consultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        window.setTimeout(() => {
+            consultSection.scrollIntoView({ behavior: "auto", block: "start" });
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, "", "#consult-apply");
+            }
+        }, 700);
+    });
+}
+
+if (consultForm && consultResponseFrame) {
+    let consultSubmitted = false;
+    const consultPopup = document.createElement("div");
+    consultPopup.className = "consult-complete-popup";
+    consultPopup.hidden = true;
+    consultPopup.innerHTML = '<div class="consult-complete-dialog" role="dialog" aria-modal="true" aria-labelledby="consult-complete-title"><strong id="consult-complete-title">상담 신청완료</strong><button type="button">확인</button></div>';
+    document.body.appendChild(consultPopup);
+
+    const closePopup = () => {
+        consultPopup.hidden = true;
+    };
+
+    consultPopup.querySelector("button").addEventListener("click", closePopup);
+    consultPopup.addEventListener("click", (event) => {
+        if (event.target === consultPopup) closePopup();
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !consultPopup.hidden) closePopup();
+    });
+
+    consultForm.addEventListener("submit", () => {
+        consultSubmitted = true;
+    });
+
+    consultResponseFrame.addEventListener("load", () => {
+        if (!consultSubmitted) return;
+        consultSubmitted = false;
+        consultForm.reset();
+        consultPopup.hidden = false;
+        consultPopup.querySelector("button").focus();
+    });
+}
