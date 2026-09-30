@@ -1115,7 +1115,7 @@ details p {
 }
 
 .region-map-image {
-    width: min(100%, 900px);
+    width: min(100%, 706px);
     margin: 0 auto;
     border-radius: 8px;
 }
