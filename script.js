@@ -146,3 +146,27 @@ if (consultForm && consultResponseFrame) {
         consultPopup.querySelector("button").focus();
     });
 }
+
+const footerKeywordRoutes = {
+    "중등영어학원": "중등영어학원/",
+    "고등영어학원": "고등영어학원/",
+    "관리형학원": "관리형학원/",
+    "자기주도학습학원": "자기주도학습학원/"
+};
+
+document.querySelectorAll(".footer-keywords").forEach((keywordGroup) => {
+    const homeLink = keywordGroup.querySelector(".footer-home-link");
+    if (!homeLink) return;
+
+    const rootUrl = new URL(homeLink.getAttribute("href"), window.location.href);
+    keywordGroup.querySelectorAll("span").forEach((keyword) => {
+        const route = footerKeywordRoutes[keyword.textContent.trim()];
+        if (!route) return;
+
+        const link = document.createElement("a");
+        link.className = "footer-keyword-link";
+        link.href = new URL(route, rootUrl).href;
+        link.textContent = keyword.textContent;
+        keyword.replaceWith(link);
+    });
+});

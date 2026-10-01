@@ -978,7 +978,8 @@ details p {
 }
 
 .footer-keywords span,
-.footer-home-link {
+.footer-home-link,
+.footer-keyword-link {
     display: inline-flex;
     align-items: center;
     color: #fff;
@@ -994,7 +995,9 @@ details p {
 }
 
 .footer-home-link:hover,
-.footer-home-link:focus-visible {
+.footer-home-link:focus-visible,
+.footer-keyword-link:hover,
+.footer-keyword-link:focus-visible {
     color: var(--orange);
 }
 
