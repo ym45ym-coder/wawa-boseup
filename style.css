@@ -84,7 +84,7 @@ img {
     gap: 30px;
     font-size: 0.98rem;
     font-weight: 700;
-    color: #000;
+    color: #aaa;
 }
 
 .main-nav a:hover,
@@ -370,6 +370,94 @@ img {
 
 .feature-panel li:last-child {
     border-bottom: 0;
+}
+
+/* 중등영어학원 지역 상세페이지 Academy 원고 아코디언 */
+.academy-accordion-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.academy-accordion-layout .section-copy {
+    text-align: center;
+}
+
+.academy-copy-toggle {
+    margin: 18px auto 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.academy-copy-toggle summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #000;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+}
+
+.academy-copy-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.academy-copy-toggle summary:hover,
+.academy-copy-toggle summary:focus-visible {
+    background: transparent;
+    color: #aaa;
+    box-shadow: none;
+}
+
+.academy-copy-toggle .academy-close-label {
+    display: none;
+}
+
+.academy-copy-toggle[open] .academy-open-label {
+    display: none;
+}
+
+.academy-copy-toggle[open] .academy-close-label {
+    display: inline;
+}
+
+.academy-copy-content {
+    width: min(100%, 820px);
+    margin: 18px auto 0;
+    text-align: left;
+}
+
+.academy-accordion-layout .academy-copy-content p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.academy-accordion-layout .academy-copy-content p:last-child {
+    margin-bottom: 0;
+}
+
+.academy-accordion-layout .feature-panel {
+    width: min(100%, 340px);
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+}
+
+.academy-accordion-layout .feature-panel h3,
+.academy-accordion-layout .feature-panel li {
+    text-align: center;
 }
 
 .program-grid {
