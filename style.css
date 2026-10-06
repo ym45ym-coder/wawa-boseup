@@ -1392,6 +1392,87 @@ details p {
     background: #fff;
 }
 
+/* 교동 지역 상세페이지 글꼴 조정 시안 */
+.region-font-preview .region-detail-grid > .region-info-panel:first-child p:not(.section-label),
+.region-font-preview .school-exam-content > p:not(.section-label),
+.region-font-preview #academy .section-copy p:not(.section-label) {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.region-font-preview .program-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.region-font-preview .program-card p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.region-font-preview .guide-grid summary {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.region-font-preview .guide-grid details p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.region-font-preview .feature-panel h3 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.region-font-preview .feature-panel li {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.region-font-preview .tuition-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.region-font-preview .tuition-table th,
+.region-font-preview .tuition-table td {
+    font-size: 16px;
+}
+
+.region-font-preview .tuition-table thead th,
+.region-font-preview .tuition-table tbody th {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.region-font-preview .tuition-table td {
+    font-weight: 400;
+}
+
+.region-font-preview .tuition-note {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.region-font-preview .region-tags span,
+.region-font-preview .school-list li {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.region-font-preview .exam-list strong {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.region-font-preview .region-info-panel h2,
+.region-font-preview .school-exam-content h2,
+.region-font-preview .section-copy h2,
+.region-font-preview .section-header h2 {
+    font-weight: 600;
+}
+
 .region-map-image {
     width: min(100%, 694px);
     height: auto;
